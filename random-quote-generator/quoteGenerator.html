@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Corey's Random Quote Machine</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- twitter widget required js -->
+<!-- 	// <script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/button.57b265f4a957883c0d94631f668764c9.js"></script> -->
+	<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Indie+Flower" rel="stylesheet" type="text/css">
+
+	<!-- my css -->
+	<link href="main.css" rel="stylesheet" type="text/css">
+
+	<!-- Import JQuery before using!-->
+		<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+<!--- Zipline for freeCodeCamp 
+Utilizes JavaScript, JQuery Library, Twitter widgetJS, Bootstrap, Google Fonts
+
+Quotes pulled from array, picked via random number generator! -->
+
+<div class="container-fluid">
+  <div class="page-header">
+    <h1>Corey's Random Quote Generator<br>
+      <small> a Zipline Project for <a href="http://www.freecodecamp.com/" target="new">freeCodeCamp</a></small></h1>
+  </div>
+
+  <div class="center-block" id="quote-space">
+      <p id="quote"></p>
+    <br>
+      <p id="author"> </p>
+  </div>
+
+      <button class="btn btn-lg btn-default" id="newquote"> Give me a new quote <span class="glyphicon glyphicon-random"></span></button>
+  
+  <div id="tweet-button"> </div>
+
+</div>
+
+<footer class="footer"> <p> Quotes pulled from a <a href="https://github.com/antoniawang/pokemonwisdom/blob/master/quotes.py" target="new">compilation </a> my friend did for a project.<p> Background image from <a href="http://subtlepatterns.com/dark-embroidery/" target="new">Subtle Patterns</a> </footer>
+
+
+<!-- twitter widget library -->
+<script src="https://platform.twitter.com/widgets.js"></script>
+<!-- bootstrap j.s. -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- my j.s. -->
+<script src="main.js"></script>
+</body>
+</html>
