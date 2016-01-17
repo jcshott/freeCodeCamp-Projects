@@ -1,101 +1,129 @@
-<div class="container-fluid"> <!-- container -->
-<h1>Corey's JavaScript Calculator</h1>
-  <div class="row"> <!-- calculator "screen" -->
-    <div class="col-xs-3">
-      <input type="text" class="form-control" id="calcScreen" readonly>
-    </div>
-  </div> <!-- calc screen -->
-  
-  <div class="row">
-    <div class="col-md-2">
-      <div class="btn-group-justified" role="group">
-        <div class="btn-group">
-          <button class="btn btn-default">AC</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">CE</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">%</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">&divide</button>
-        </div>
-      </div>
-    </div> <!-- col-2 -->
-  </div> <!-- end first row btns -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Corey's JavaScript Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- twitter widget required js -->
+  <!--  // <script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/button.57b265f4a957883c0d94631f668764c9.js"></script> -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-    <div class="row">
-    <div class="col-md-2">
-      <div class="btn-group-justified" role="group">
-        <div class="btn-group">
-          <button class="btn btn-default">7</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">8</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">9</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">*</button>
-        </div>
-      </div>
-    </div> <!-- col-2 -->
-  </div> <!-- end 2nd row btns -->
-  
-  <div class="row">
-    <div class="col-md-2">
-      <div class="btn-group-justified" role="group">
-        <div class="btn-group">
-          <button class="btn btn-default">4</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">5</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">6</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">-</button>
-        </div>
-      </div>
-    </div> <!-- col-2 -->
-  </div> <!-- end 3rd row btns -->
- 
-  <div class="row">
-    <div class="col-md-2">
-      <div class="btn-group-justified" role="group">
-        <div class="btn-group">
-          <button class="btn btn-default">1</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">2</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">3</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">+</button>
-        </div>
-      </div>
-    </div> <!-- col-2 -->
-  </div> <!-- end 4th row btns -->
+    <!-- google font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 
-  <div class="row">
-    <div class="col-md-2">
-      <div class="btn-group-justified" role="group">
-        <div class="btn-group">
-          <button class="btn btn-default">0</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">.</button>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-default">=</button>
-        </div>
-      </div>
-    </div> <!-- col-2 -->
-  </div> <!-- end last row btns -->
+    <!-- my css -->
+    <link href="style-calc.css" rel="stylesheet" type="text/css">
 
-</div> <!-- close container  -->
+    <!-- Import JQuery before using!-->
+    <script src="https://code.jquery.com/jquery.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid"> <!-- container -->
+      <div class="page-header">
+        <h1>Corey's JavaScript Calculator<br>
+          <small> A Project for <a href="http://www.freecodecamp.com/" target="new">freeCodeCamp</a></small></h1>
+      </div>
+      
+      <div class="col-md-5">
+        <!-- empty column to center calc on page -->
+      </div>
+      <div class="col-md-2">
+        <div class="row"> <!-- calc "screen" -->
+            <input type="text" class="form-control input-lg" id="calcScreen" readonly>
+        </div> <!-- calc screen -->
+
+        <div class="row">
+            <div class="btn-group-justified" role="group">
+              <div class="btn-group">
+                <button class="btn btn-default">AC</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-default">CE</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-default">+/-</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-default">&divide</button>
+              </div>
+            </div>
+        </div> <!-- end first row btns -->
+
+        <div class="row">
+          <div class="btn-group-justified" role="group">
+            <div class="btn-group">
+              <button class="btn btn-default">7</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">8</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">9</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">*</button>
+            </div>
+          </div> <!-- btn group justified -->
+        </div> <!-- end 2nd row btns -->
+      
+      <div class="row">
+        <div class="btn-group-justified" role="group">
+            <div class="btn-group">
+              <button class="btn btn-default">4</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">5</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">6</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">-</button>
+            </div>
+          </div>
+      </div> <!-- end 3rd row btns -->
+     
+      <div class="row">
+          <div class="btn-group-justified" role="group">
+            <div class="btn-group">
+              <button class="btn btn-default">1</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">2</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">3</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">+</button>
+            </div>
+          </div>
+      </div> <!-- end 4th row btns -->
+
+      <div class="row">
+          <div class="btn-group-justified" role="group">
+            <div class="btn-group">
+              <button class="btn btn-default">.</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default">0</button>
+            </div>
+    <!--         <div class="btn-group">
+              <button class="btn btn-default" disabled>+/-</button>
+            </div> -->
+            <div class="btn-group">
+              <button class="btn btn-default">=</button>
+            </div>
+          </div>
+      </div> <!-- end last row btns -->
+      </div> <!-- end column -->
+    </div> <!-- close container  -->
+
+    <footer class="footer"> Background image from <a href="http://subtlepatterns.com/tweed/" target="new">Subtle Patterns</a> </footer>
+
+    <!-- my j.s. -->
+    <script src="script-calc.js"></script>
+  </body>
+</html>
