@@ -1,0 +1,91 @@
+!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Corey's Random Quote Machine</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- twitter widget required js -->
+<!-- 	// <script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/button.57b265f4a957883c0d94631f668764c9.js"></script> -->
+	<!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- google font -->
+
+	<!-- my css -->
+	<link href="style-pomodoro.css" rel="stylesheet" type="text/css">
+
+	<!-- Import JQuery before using!-->
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+<!--- Zipline for freeCodeCamp 
+Utilizes JavaScript, JQuery Library, D3, Bar Stacker Gauge, Bootstrap, Google Fonts. 
+ -->
+
+<div class="container-fluid">
+<audio src="https://www.freesound.org/data/previews/72/72129_1028972-lq.mp3" id="alertSound"></audio>
+	
+	<div class="page-header">
+		<h1>Corey's <span id="pom">Pomodoro</span> Clock<br>
+      <small> a Project for <a href="http://www.freecodecamp.com/" target="new">freeCodeCamp</a></small></h1>
+	</div><!--header-->
+
+	<div class="row timeControl">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class='workControl'>
+				<p> Work Length </p>
+				<a class="timeHandler plus" id="workPlus"><span class="glyphicon glyphicon-plus"></span></a>
+				<span id="workTime">25</span>
+				<a class="timeHandler minus" id="workMinus">
+					<span class="glyphicon glyphicon-minus workMinus"></span>
+				</a>
+			</div>
+			<div class="breakControl">
+				<p> Break Length </p>
+				<a class="timeHandler plus" id="breakPlus">
+					<span class="glyphicon glyphicon-plus"></span>
+				</a>
+				<span id="breakTime">5</span>
+				<a class="timeHandler minus" id="breakMinus">
+					<span class="glyphicon glyphicon-minus"></span>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-2"></div>
+
+	</div><!--- timer set row -->
+
+	<div class="row">
+		<div class="col-md-2"></div>
+		
+		<div class="col-md-8">
+			<div class="col-centered col-fixed" id="meter">
+				<p id="statusLabel">Work</p>
+				<span id="timeMin"></span>
+				<span id="colon">:</span>
+				<span id="timeSec">00</span>
+			</div> <!--col fixed div -->
+			
+			<div class="row">
+				<div class="btn-group" role="group">
+					<button class="btn btn-lg" type="button" id="start">Start</button>
+					<button class="btn btn-lg" type="button" id="stop">Stop</button>
+					<button class="btn btn-lg" type="button" id="reset" disabled>Reset</button>
+				</div> <!-- btn-group -->
+			</div> <!--btn row -->
+		</div><!--center md-8 col -->
+		</div><!--right col -->
+	</div> <!--- meter row -->
+
+</div><!---div container-fluid -->
+
+<footer class="footer">
+	<p>Background image from <a href="http://subtlepatterns.com/dark-embroidery/" target="new">Subtle Patterns</a> </p>
+	<p> Find the developer on <a href="https://github.com/jcshott">Github </a> </p>
+</footer>
+<!-- my j.s. -->
+<script src="pomodoro.js"></script>
+</body>
+</html>
